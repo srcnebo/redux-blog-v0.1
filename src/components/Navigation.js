@@ -1,17 +1,14 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Link,
   Route,
   Switch,
-  Redirect,
-  Prompt
+  Redirect
 } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 import * as actions from '../store/actions/actions';
 import { bindActionCreators } from 'redux';
-import Home from './PostList';
 import CreatePost from './CreatePost';
 import SinglePost from './SinglePost';
 import Navbar from './Navbar';
@@ -43,8 +40,9 @@ class Navigation extends React.Component {
                 <SinglePost {...props} posts={this.props.posts} />
               )}
             />
-
             <Route component={() => <h2>Page was not found</h2>} />
+            {/* <Route path="/posts/" component={} /> */}
+            <Redirect to="/404" />
           </Switch>
         </div>
       </Router>

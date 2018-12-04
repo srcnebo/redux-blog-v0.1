@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import SinglePost from './components/SinglePost';
 import PostList from './components/PostList';
 
 class App extends Component {
