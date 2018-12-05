@@ -7,14 +7,14 @@ class SinglePost extends Component {
 
     return posts
       .filter(post => post.id === Number(i))
-      .map((post, key) => (
+      .map((el, key) => (
         <div className="single-post" key={'post' + key}>
-          <h1>Title:{post.title}</h1>
-          <h2>Auther:{post.category}</h2>
+          <h1>Title:{el.title}</h1>
+          <h2>Auther:{el.category}</h2>
           <p>
             Summary:
             <br />
-            {post.content}
+            {el.content}
           </p>
         </div>
       ));

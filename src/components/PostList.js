@@ -8,7 +8,7 @@ class PostList extends Component {
     return posts.map((post, i) => {
       return (
         <div className="post-grid-item">
-          <Link to={'/post/' + i}>
+          <Link to={'/post/' + post.id}>
             <div key={'title' + i}>{post.title}</div>
           </Link>
           <div key={'category' + i}>{post.category}</div>

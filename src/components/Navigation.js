@@ -33,7 +33,10 @@ class Navigation extends React.Component {
                 />
               )}
             />
-            <Route path="/post/newpost" component={CreatePost} />
+            <Route
+              path="/post/newpost"
+              render={props => <CreatePost addPost={this.props.addPost} />}
+            />
             <Route
               path="/post/:id"
               render={props => (

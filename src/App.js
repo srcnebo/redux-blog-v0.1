@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import PostList from './components/PostList';
+import { withRouter } from 'react-router';
 
 class App extends Component {
   add = () => {
@@ -15,4 +16,4 @@ class App extends Component {
     );
   }
 }
-export default App;
+export default withRouter(App);

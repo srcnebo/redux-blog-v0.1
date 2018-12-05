@@ -5,7 +5,7 @@ const postsReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_POST:
       console.log('add post case');
-      return state;
+      return state.concat([action.data]);
     case DELETE_POST:
       console.log('delete post case good');
       return state;

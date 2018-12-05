@@ -1,12 +1,9 @@
 import { ADD_POST, DELETE_POST } from './actionTypes';
 
-export const addPost = (title, category, content) => {
-  console.log(title, category, content);
+export const addPost = data => {
   return {
     type: ADD_POST,
-    title,
-    category,
-    content
+    data
   };
 };
 
