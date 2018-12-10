@@ -13,6 +13,7 @@ import CreatePost from './CreatePost';
 import SinglePost from './SinglePost';
 import Navbar from './Navbar';
 import App from '../App';
+import EditPost from './EditPost';
 
 class Navigation extends React.Component {
   render() {
@@ -40,7 +41,22 @@ class Navigation extends React.Component {
             <Route
               path="/post/:id"
               render={props => (
-                <SinglePost {...props} posts={this.props.posts} />
+                <SinglePost
+                  {...props}
+                  posts={this.props.posts}
+                  deletePost={this.props.deletePost}
+                  editPost={this.props.editPost}
+                />
+              )}
+            />
+            <Route
+              path="/edit/:id"
+              render={props => (
+                <EditPost
+                  {...props}
+                  posts={this.props.posts}
+                  editPost={this.props.editPost}
+                />
               )}
             />
             <Route component={() => <h2>Page was not found</h2>} />
